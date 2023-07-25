@@ -1,5 +1,9 @@
 # PixiJS game with React UI POC
 
+## Demo
+
+https://react-pixi-poc.netlify.app/
+
 ## Motivation
 
 - PixiJS is great for rendering things like games.
