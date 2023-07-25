@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Game from "./Game";
+import UI from "./UI";
 
-function App() {
+const App = () => {
+  const [uiState, setUiState] = React.useState({ x: 0, y: 0 });
+  const [uiEvent, setUiEvent] = React.useState("");
+
+  // Functions to handle clicks from the React UI
+  const moveForward = () => setUiEvent("CLICKED_MOVE_FORWARD");
+  const moveDown = () => setUiEvent("CLICKED_MOVE_DOWN");
+  const reset = () => setUiEvent("CLICKED_RESET");
+
+  const triggers = {
+    moveForward,
+    moveDown,
+    reset,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Game
+        uiEvent={uiEvent}
+        setUiState={setUiState}
+        resetUiEvent={() => setUiEvent("")}
+      />
+      <UI uiState={uiState} triggers={triggers} />
+    </>
   );
-}
+};
 
 export default App;
