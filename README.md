@@ -4,7 +4,8 @@
 
 https://react-pixi-poc.netlify.app/
 
-<img width="500" alt="Screenshot 2023-07-25 at 15 30 29" src="https://github.com/TimAstier/pixi-react-poc/assets/8555097/475c2c72-66ff-45cf-abd4-6b976a43c57e">
+<img width="500" alt="Screenshot" src="https://github.com/TimAstier/pixi-react-poc/assets/8555097/21c58d8b-c013-4a8d-bf98-607fd037b1ec">
+
 
 ## Motivation
 
